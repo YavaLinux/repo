@@ -1,0 +1,9 @@
+name: yavalinux
+services:
+  update_repo:
+    image: archlinux
+    deploy:
+      mode: global-job
+    volumes:
+      - ./:/yavalinux
+    entrypoint: /yavalinux/update.sh
